@@ -6,7 +6,7 @@
 /*   By: khorike <khorike@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 18:08:38 by khorike           #+#    #+#             */
-/*   Updated: 2023/07/27 19:27:28 by khorike          ###   ########.fr       */
+/*   Updated: 2023/07/27 20:00:07 by khorike          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	*death_check(void *arg)
 		{
 			if (!phi->data->dead)
 			{
-				printf("%llu %d died\n", get_time_ms(), phi->id);
+				printf("%lu %d died\n", get_time_ms(), phi->id);
 				phi->data->dead = 1;
 			}
 			pthread_mutex_unlock(&phi->data->dead_mutex);

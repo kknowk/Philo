@@ -6,7 +6,7 @@
 /*   By: khorike <khorike@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 17:49:18 by khorike           #+#    #+#             */
-/*   Updated: 2023/07/27 19:15:19 by khorike          ###   ########.fr       */
+/*   Updated: 2023/07/27 20:00:10 by khorike          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	ft_take_forks(t_data *data, t_philo *phi)
 	if (data->philo_num == 1)
 	{
 		pthread_mutex_lock(phi->l_fork);
-		printf("%llu %d has taken a fork\n", get_time_ms(), phi->id);
+		printf("%lu %d has taken a fork\n", get_time_ms(), phi->id);
 	}
 	else if (phi->id % 2 == 0)
 	{
@@ -30,13 +30,13 @@ static void	ft_take_forks(t_data *data, t_philo *phi)
 		pthread_mutex_lock(phi->l_fork);
 		pthread_mutex_lock(phi->r_fork);
 	}
-	printf("%llu %d has taken a fork\n", get_time_ms(), phi->id);
+	printf("%lu %d has taken a fork\n", get_time_ms(), phi->id);
 }
 
 static void	ft_eat(t_data *data, t_philo *phi)
 {
 	pthread_mutex_lock(&phi->lock);
-	printf("%llu %d is eating\n", get_time_ms(), phi->id);
+	printf("%lu %d is eating\n", get_time_ms(), phi->id);
 	usleep(data->eat_time * 1000);
 	phi->time_to_die = get_time_ms();
 	phi->eat_cont++;
@@ -45,14 +45,14 @@ static void	ft_eat(t_data *data, t_philo *phi)
 
 static void	ft_sleep(t_data *data, t_philo *phi)
 {
-	printf("%llu %d is sleeping\n", get_time_ms(), phi->id);
+	printf("%lu %d is sleeping\n", get_time_ms(), phi->id);
 	usleep(data->sleep_time * 1000);
 }
 
 static void	ft_think(t_data *data, t_philo *phi)
 {
 	(void)data;
-	printf("%llu %d is thinking\n", get_time_ms(), phi->id);
+	printf("%lu %d is thinking\n", get_time_ms(), phi->id);
 }
 
 void	*life_cycle(void *arg)
