@@ -6,7 +6,7 @@
 /*   By: khorike <khorike@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 18:08:38 by khorike           #+#    #+#             */
-/*   Updated: 2023/07/27 20:00:07 by khorike          ###   ########.fr       */
+/*   Updated: 2023/07/27 20:04:09 by khorike          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	*death_check(void *arg)
 	t_philo	*phi;
 	t_data	*data;
 
+	(void)data;
 	phi = (t_philo *)arg;
 	data = phi->data;
 	while (1)
