@@ -1,7 +1,7 @@
 NAME = philo
 CC = cc
 INCLUDES_DIR = ./Includes
-CFLAGS = -Wall -Wextra -Werror -I$(INCLUDES_DIR)
+CFLAGS = -I$(INCLUDES_DIR)
 # CFLAGS += -g -fsanitize=address
 # CFLAGS += -g -fsanitize=thread
 
