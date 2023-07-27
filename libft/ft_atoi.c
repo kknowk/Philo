@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: khorike <khorike@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: khorike <khorike@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 18:26:07 by khorike           #+#    #+#             */
-/*   Updated: 2023/05/19 14:16:06 by khorike          ###   ########.fr       */
+/*   Updated: 2023/07/27 20:06:56 by khorike          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,9 @@ static int	atat(const char *nptr, int count)
 int	ft_atoi(const char *nptr)
 {
 	int		i;
-	int		j;
 	int		count;
 
 	i = 0;
-	j = 0;
 	count = 1;
 	if (!nptr)
 		return (0);
