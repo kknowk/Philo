@@ -18,7 +18,7 @@ OBJS = $(SRCS:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS) $(LIBFT)
-	$(CC) $(CFLAGS) $(OBJS)-o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 # $(LIBFT):
 # 	$(MAKE) -C $(LIBDIR)

@@ -17,4 +17,4 @@ jobs:
       run: make # Replace with your build command if necessary
 
     - name: Run Valgrind
-      run: valgrind --error-exitcode=1 /Users/khorike/Desktop/名称未設定フォルタ<3099> 2/philo/philo 2 3 4 5 2 # Replace 'your_executable' with the name of your compiled C program
+      run: valgrind --error-exitcode=1 ./philo 2 3 4 5 2 # Replace 'your_executable' with the name of your compiled C program
