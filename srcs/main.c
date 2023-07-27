@@ -6,7 +6,7 @@
 /*   By: khorike <khorike@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 13:00:12 by khorike           #+#    #+#             */
-/*   Updated: 2023/07/27 20:33:55 by khorike          ###   ########.fr       */
+/*   Updated: 2023/07/27 20:41:21 by khorike          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,12 @@ static int	start_threads(t_data *data)
 
 static void	end_program(t_data *data)
 {
-	free(data->philos);
-	free(data->forks);
+	if (data->philos)
+		free(data->philos);
+	data->philos = NULL;
+	if (data->forks)
+		free(data->forks);
+	data->forks = NULL;
 }
 
 int	main(int argc, char **argv)
