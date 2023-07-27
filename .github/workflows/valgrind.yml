@@ -1,0 +1,20 @@
+name: Valgrind Memory Check
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Valgrind
+      run: sudo apt-get update && sudo apt-get install -y valgrind
+
+    - name: Build project
+      run: make # Replace with your build command if necessary
+
+    - name: Run Valgrind
+      run: valgrind --error-exitcode=1 ./philo 2 3 4 5 2 # Replace 'your_executable' with the name of your compiled C program
