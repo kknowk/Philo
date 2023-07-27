@@ -6,7 +6,7 @@
 /*   By: khorike <khorike@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:00:52 by khorike           #+#    #+#             */
-/*   Updated: 2023/07/27 20:11:43 by khorike          ###   ########.fr       */
+/*   Updated: 2023/07/27 20:28:59 by khorike          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <strings.h>
 # include <signal.h>
 # include <unistd.h>
 # include <string.h>

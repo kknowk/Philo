@@ -6,7 +6,7 @@
 /*   By: khorike <khorike@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 13:00:12 by khorike           #+#    #+#             */
-/*   Updated: 2023/07/27 19:27:52 by khorike          ###   ########.fr       */
+/*   Updated: 2023/07/27 20:33:55 by khorike          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 static int	init_data(t_data *data, int argc, char **argv)
 {
-	pthread_mutex_init(&data->dead_mutex, NULL);
-	pthread_mutex_init(&data->finished_mutex, NULL);
+	// pthread_mutex_init(&data->dead_mutex, NULL);
+	// pthread_mutex_init(&data->finished_mutex, NULL);
+	bzero(data, sizeof(t_data));
 	data->philo_num = ft_atoi_kai(argv[1]);
 	data->death_time = ft_atoi_kai(argv[2]);
 	data->eat_time = ft_atoi_kai(argv[3]);
@@ -35,6 +36,7 @@ static int	init_data(t_data *data, int argc, char **argv)
 		free(data->forks);
 		return (FAILURE);
 	}
+	bzero(data->philos, sizeof(t_philo));
 	return (SUCCESS);
 }
 
@@ -85,6 +87,7 @@ int	main(int argc, char **argv)
 {
 	t_data	data;
 
+	// bzero(data, sizeof(t_data));
 	if (check_argc(argc, argv))
 		return (FAILURE);
 	if (init_data(&data, argc, argv) == FAILURE)
