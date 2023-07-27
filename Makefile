@@ -12,23 +12,22 @@ SRCS = srcs/main.c \
 
 OBJS = $(SRCS:%.c=%.o)
 
-LIBDIR = ./libft
-LIBFT = $(LIBDIR)/libft.a
+# LIBDIR = ./libft
+# LIBFT = $(LIBDIR)/libft.a
 
 all: $(NAME)
 
 $(NAME): $(OBJS) $(LIBFT)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS)-o $(NAME)
 
-$(LIBFT):
-	$(MAKE) -C $(LIBDIR)
+# $(LIBFT):
+# 	$(MAKE) -C $(LIBDIR)
 
 clean:
-	$(MAKE) fclean -C $(LIBDIR)
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME) $(LIBFT)
+	$(RM) $(NAME)
 
 re: fclean all
 
