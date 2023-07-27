@@ -6,7 +6,7 @@
 /*   By: khorike <khorike@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:00:52 by khorike           #+#    #+#             */
-/*   Updated: 2023/07/26 19:27:10 by khorike          ###   ########.fr       */
+/*   Updated: 2023/07/27 20:11:43 by khorike          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@
 # include <pthread.h>
 # include <stdint.h>
 
-# include "../libft/libft.h"
-# include "../libft/ft_printf/ft_printf.h"
-# include "../libft/gnl/get_next_line.h"
+// # include "../libft/libft.h"
+// # include "../libft/ft_printf/ft_printf.h"
+// # include "../libft/gnl/get_next_line.h"
 
 # define FAILURE 1
 # define SUCCESS 0
